@@ -25,8 +25,13 @@ class bind::defaults (
     $chroot_class           = undef,
     $chroot_dir             = undef,
 ) {
-    unless is_bool($supported) {
-        fail('Please ensure that the dependencies of the bind module are installed and working correctly')
+    if $facts['puppet_version'] < '7.0.0' {
+        unless is_bool($supported) {
+    } else {
+        unless $supported.is_a(Boolean) {
+            fail('Please ensure that the dependencies of the bind module are installed and working correctly')
+        }
+    }
     }
     unless $supported {
         fail('Platform is not supported')
