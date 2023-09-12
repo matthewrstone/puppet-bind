@@ -25,7 +25,7 @@ class bind::defaults (
     $chroot_class           = undef,
     $chroot_dir             = undef,
 ) {
-    unless is_bool($supported) {
+    unless $supported.is_a(Boolean) {
         fail('Please ensure that the dependencies of the bind module are installed and working correctly')
     }
 
