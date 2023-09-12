@@ -26,7 +26,7 @@ class bind::defaults (
     $chroot_dir             = undef,
 ) {
     # If puppet_version is 7 or greater, use ruby 4 api
-    if $facts['puppet_version'] =~ '[7-8]\.(0|[1-9]\d*)\.(0|[1-9]\d*)' {
+    if $facts['puppetversion'] =~ '[7-8]\.(0|[1-9]\d*)\.(0|[1-9]\d*)' {
         unless is_bool($supported) {
     } else {
         unless $supported.is_a(Boolean) {
