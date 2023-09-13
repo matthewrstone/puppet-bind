@@ -27,7 +27,7 @@ options {
 	forward <%= @forward %>;
 <%- end -%>
 	auth-nxdomain <%= @auth_nxdomain ? 'yes' : 'no' %>;
-	listen-on { any; }
+	listen-on { any; };
 	listen-on-v6 { any; };
 <%- if @filter_ipv6 -%>
 	filter-aaaa-on-v4 yes;
