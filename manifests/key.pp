@@ -4,7 +4,7 @@ define bind::key (
     $secret      = undef,
     $secret_bits = 256,
     $algorithm   = 'hmac-sha256',
-    $owner       = 'root',
+    $owner       = 'bind',
     $group       = $::bind::defaults::bind_group,
     $keydir      = $::bind::keydir::keydir,
     $keyfile     = undef,

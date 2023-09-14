@@ -6,7 +6,7 @@ class bind::keydir (
     file { $keydir:
         ensure => directory,
         mode   => '0755',
-        owner  => 'root',
+        owner  => 'bind',
         group  => 'bind',
     }
 }
