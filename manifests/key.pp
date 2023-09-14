@@ -35,7 +35,7 @@ define bind::key (
         ensure  => present,
         owner   => $owner,
         group   => $group,
-        mode    => '0640',
+        mode    => '0400',
         replace => $replace,
         content => template('bind/key.conf.erb'),
     }
