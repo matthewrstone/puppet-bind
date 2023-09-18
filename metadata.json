@@ -1,12 +1,12 @@
 {
   "name": "inkblot-bind",
   "version": "7.4.0",
-  "author": "inkblot",
+  "author": "souldo",
   "license": "Apache-2.0",
-  "summary": "ISC BIND name server",
-  "source": "git://github.com/inkblot/puppet-bind.git",
-  "project_page": "https://github.com/inkblot/puppet-bind",
-  "issues_url": "https://github.com/inkblot/puppet-bind/issues",
+  "summary": "ISC BIND name server <-- forked from inkblot",
+  "source": "git://github.com/matthewrstone/puppet-bind.git",
+  "project_page": "https://github.com/matthewrstone/puppet-bind",
+  "issues_url": "https://github.com/matthewrstone/puppet-bind/issues",
   "tags": [ "bind", "dns", "dnssec", "nsupdate" ],
   "operatingsystem_support": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [ "12.04", "14.04", "16.04", "22.04" ]
+      "operatingsystemrelease": [ "22.04" ]
     },
     {
       "operatingsystem": "CentOS",
@@ -29,6 +29,5 @@
   "dependencies": [
     { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.15.0 < 10.0.0" },
     { "name": "puppetlabs/concat", "version_requirement": ">= 2.2.1 < 5.0.0" }
-  ],
-  "data_provider": "hiera"
+  ]
 }
